@@ -11,6 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MatchScoreServiceTest {
 
+    // Логику начисления очков должно быть возможным тестировать без участия JPA Entity.
+        // Это исправится после рефакторинга классов моделей.
+
+    // После проведения декомпозиции и рефакторинга доменных моделей, также следует изменить тесты для этой части логики.
+
+    // MatchScoreService внутри себя создаёт MatchRepository, что превращает юнит-тест в интеграционный.
+        // Это тоже исправится после рефакторинга классов моделей.
+
     private Player player1;
     private Player player2;
     private OngoingMatch match;
@@ -199,6 +207,7 @@ public class MatchScoreServiceTest {
         assertTrue(match.isTiebreak());
     }
 
+    // TODO: Согласно ТЗ, для победы в тай-брейке нужно набрать минимум 7 очков и иметь преимущество в 2 очка.
     @Test
     @DisplayName("Win tiebreak 6-0")
     void winTiebreakAt6_0(){

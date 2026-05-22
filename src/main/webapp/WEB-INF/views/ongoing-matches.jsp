@@ -48,6 +48,7 @@
                         <tr>
                             <td>${match.player1.name}</td>
                             <td>${match.player2.name}</td>
+                            <!-- JSP страница не должна содержать логику преобразования счёта — это задача маппера или сервисного слоя. -->
                             <td>
                                 <c:choose>
                                     <c:when test="${match.tiebreak}">

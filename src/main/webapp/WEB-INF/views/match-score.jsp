@@ -50,6 +50,7 @@
                     <td class="table-text">${match.player1.name}</td>
                     <td class="table-text">${match.setsPlayer1}</td>
                     <td class="table-text">${match.gamesPlayer1}</td>
+                    <!-- JSP страница не должна содержать логику преобразования счёта — это задача маппера или сервисного слоя. -->
                     <td class="table-text">
                         <c:choose>
                             <c:when test="${match.tiebreak}">${match.pointsPlayer1}</c:when>

@@ -68,6 +68,7 @@
                     <a class="prev" href="${pageContext.request.contextPath}/matches?page=${currentPage-1}&filter_by_player_name=${filterName}"> < </a>
                 </c:if>
 
+                <!-- Цикл от 1 до totalPages отображает сразу все существующие страницы. Лучше сделать окно пагинации ограниченным текущей страницей +-2 вокруг неё -->
                 <c:forEach var="i" begin="1" end="${totalPages}">
                     <c:choose>
                         <c:when test="${i == currentPage}">
