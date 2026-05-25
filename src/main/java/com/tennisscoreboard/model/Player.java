@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 public class Player {
 
     // Более уместным было бы разместить класс в пакете 'entity'.
-        // (см. файл ""Типы моделей" в веб-приложении.md" в этом же пакете)
+        // (см. файл "model-types.md" в этом же пакете)
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
